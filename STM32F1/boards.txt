@@ -395,6 +395,12 @@ genericSTM32F103C.menu.upload_method.HIDUploadMethod.build.upload_flags=-DSERIAL
 genericSTM32F103C.menu.upload_method.HIDUploadMethod.build.vect=VECT_TAB_ADDR=0x8001000
 genericSTM32F103C.menu.upload_method.HIDUploadMethod.build.ldscript=ld/hid_bootloader.ld
 
+genericSTM32F103C.menu.upload_method.TKG-HIDUploadMethod=TKG HID bootloader 3.1
+genericSTM32F103C.menu.upload_method.TKG-HIDUploadMethod.upload.tool=tkg_hid_upload
+genericSTM32F103C.menu.upload_method.TKG-HIDUploadMethod.build.upload_flags=-DSERIAL_USB -DGENERIC_BOOTLOADER
+genericSTM32F103C.menu.upload_method.TKG-HIDUploadMethod.build.vect=VECT_TAB_ADDR=0x8001000
+genericSTM32F103C.menu.upload_method.TKG-HIDUploadMethod.build.ldscript=ld/tkg_hid_bootloader.ld
+
 #-- CPU Clock frequency
 genericSTM32F103C.menu.cpu_speed.speed_72mhz=72Mhz (Normal)
 genericSTM32F103C.menu.cpu_speed.speed_72mhz.build.f_cpu=72000000L
@@ -551,20 +557,18 @@ genericSTM32F103R.menu.device_variant.STM32F103R8.upload.maximum_data_size=20480
 genericSTM32F103R.menu.device_variant.STM32F103R8.build.ldscript=ld/stm32f103r8.ld
 
 genericSTM32F103R.menu.device_variant.STM32F103RB=STM32F103RB (20k RAM. 128k Flash)
-genericSTM32F103R.menu.device_variant.STM32F103RB.build.variant=generic_stm32f103r8
+genericSTM32F103R.menu.device_variant.STM32F103RB.build.variant=generic_stm32f103rb
 genericSTM32F103R.menu.device_variant.STM32F103RB.build.cpu_flags=-DMCU_STM32F103RB
 genericSTM32F103R.menu.device_variant.STM32F103RB.upload.maximum_size=131072
 genericSTM32F103R.menu.device_variant.STM32F103RB.upload.maximum_data_size=20480
-genericSTM32F103R.menu.device_variant.STM32F103RB.build.ldscript=ld/stm32f103rb.ld
+genericSTM32F103R.menu.device_variant.STM32F103RB.build.ldscript=ld/jtag.ld
 
 genericSTM32F103R.menu.device_variant.STM32F103RC=STM32F103RC (48k RAM. 256k Flash)
-genericSTM32F103R.menu.device_variant.STM32F103RC.build.variant=generic_stm32f103r
+genericSTM32F103R.menu.device_variant.STM32F103RC.build.variant=generic_stm32f103rc
 genericSTM32F103R.menu.device_variant.STM32F103RC.build.cpu_flags=-DMCU_STM32F103RC
 genericSTM32F103R.menu.device_variant.STM32F103RC.upload.maximum_size=262144
 genericSTM32F103R.menu.device_variant.STM32F103RC.upload.maximum_data_size=49152
-genericSTM32F103R.menu.device_variant.STM32F103RC.upload.ram.maximum_size=49152
-genericSTM32F103R.menu.device_variant.STM32F103RC.upload.flash.maximum_size=262144
-genericSTM32F103R.menu.device_variant.STM32F103RC.build.ldscript=ld/stm32f103rc.ld
+genericSTM32F103R.menu.device_variant.STM32F103RC.build.ldscript=ld/jtag.ld
 
 genericSTM32F103R.menu.device_variant.STM32F103RE=STM32F103RE (64k RAM. 512k Flash)
 genericSTM32F103R.menu.device_variant.STM32F103RE.build.variant=generic_stm32f103r
@@ -598,6 +602,18 @@ genericSTM32F103R.menu.upload_method.BMPMethod=BMP (Black Magic Probe)
 genericSTM32F103R.menu.upload_method.BMPMethod.upload.protocol=gdb_bmp
 genericSTM32F103R.menu.upload_method.BMPMethod.upload.tool=bmp_upload
 genericSTM32F103R.menu.upload_method.BMPMethod.build.upload_flags=-DCONFIG_MAPLE_MINI_NO_DISABLE_DEBUG
+
+genericSTM32F103R.menu.upload_method.HIDUploadMethod=HID bootloader 2.0
+genericSTM32F103R.menu.upload_method.HIDUploadMethod.upload.tool=hid_upload
+genericSTM32F103R.menu.upload_method.HIDUploadMethod.build.upload_flags=-DSERIAL_USB -DGENERIC_BOOTLOADER
+genericSTM32F103R.menu.upload_method.HIDUploadMethod.build.vect=VECT_TAB_ADDR=0x8001000
+genericSTM32F103R.menu.upload_method.HIDUploadMethod.build.ldscript=ld/hid_bootloader.ld
+
+genericSTM32F103R.menu.upload_method.TKG-HIDUploadMethod=TKG HID bootloader 3.1
+genericSTM32F103R.menu.upload_method.TKG-HIDUploadMethod.upload.tool=tkg_hid_upload
+genericSTM32F103R.menu.upload_method.TKG-HIDUploadMethod.build.upload_flags=-DSERIAL_USB -DGENERIC_BOOTLOADER
+genericSTM32F103R.menu.upload_method.TKG-HIDUploadMethod.build.vect=VECT_TAB_ADDR=0x8001000
+genericSTM32F103R.menu.upload_method.TKG-HIDUploadMethod.build.ldscript=ld/tkg_hid_bootloader.ld
 
 #-- CPU Clock frequency
 genericSTM32F103R.menu.cpu_speed.speed_72mhz=72Mhz (Normal)

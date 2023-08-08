@@ -97,7 +97,7 @@ void nvic_set_vector_table(uint32 address, uint32 offset) {
 void nvic_sys_reset() {
     uint32 prigroup = SCB_BASE->AIRCR & SCB_AIRCR_PRIGROUP;
     SCB_BASE->AIRCR = SCB_AIRCR_VECTKEY | SCB_AIRCR_SYSRESETREQ | prigroup;
-    asm volatile("dsb");
+    __asm__ volatile("dsb");
     while (1)
         ;
 }

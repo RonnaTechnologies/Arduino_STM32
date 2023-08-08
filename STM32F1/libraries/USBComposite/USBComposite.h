@@ -7,7 +7,7 @@
 //#include <libmaple/usb.h>
 
 #include <USBCompositeSerial.h>
-#include <USBHID.h>
+//#include <USBHID.h>
 #include <USBXBox360.h>
 #include <USBMassStorage.h>
 #include <USBMIDI.h>

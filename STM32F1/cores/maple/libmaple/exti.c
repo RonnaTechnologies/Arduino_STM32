@@ -217,8 +217,8 @@ void dispatch_single_exti(uint32 exti) {
 
     handler(exti_channels[exti].arg);
     EXTI_BASE->PR = (1U << exti);
-    asm volatile("nop");
-    asm volatile("nop");
+    __asm__ volatile("nop");
+    __asm__ volatile("nop");
 }
 
 /* Dispatch routine for EXTIs which share an IRQ. */
@@ -241,8 +241,8 @@ void dispatch_extis(uint32 start, uint32 stop) {
 
     /* Clear the pending bits for handled EXTIs. */
     EXTI_BASE->PR = (handled_msk);
-    asm volatile("nop");
-    asm volatile("nop");
+    __asm__ volatile("nop");
+    __asm__ volatile("nop");
 }
 
 
