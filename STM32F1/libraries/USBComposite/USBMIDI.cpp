@@ -54,7 +54,7 @@
  * USBMIDI interface
  */
 
-#define USB_TIMEOUT 50
+#define USB_TIMEOUT 500
 
 void USBMIDI::setChannel(unsigned int channel) {
 	channelIn_ = channel;
@@ -96,9 +96,9 @@ void USBMIDI::writePacket(uint32 p) {
 }
 
 void USBMIDI::writePackets(const void *buf, uint32 len) {
-    if (!this->isConnected() || !buf) {
-        return;
-    }
+    // if (!this->isConnected() || !buf) {
+    //     return;
+    // }
 
     uint32 txed = 0;
     uint32 old_txed = 0;
