@@ -54,8 +54,8 @@
 
 #include "usb_generic.h"
 
-const char DEFAULT_PRODUCT[] = "Maple";
-const char DEFAULT_MANUFACTURER[] = "LeafLabs";
+const char DEFAULT_PRODUCT[] = "DHD";
+const char DEFAULT_MANUFACTURER[] = "RonnaTechnologies";
 
 static uint8* usbGetConfigDescriptor(uint16 length);
 static void usbInit(void);

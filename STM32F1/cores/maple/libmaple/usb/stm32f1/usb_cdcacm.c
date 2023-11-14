@@ -224,17 +224,17 @@ static const usb_descriptor_string usbVcomDescriptor_LangID = {
 
 /* FIXME move to Wirish */
 static const usb_descriptor_string usbVcomDescriptor_iManufacturer = {
-    .bLength = USB_DESCRIPTOR_STRING_LEN(8),
+    .bLength = USB_DESCRIPTOR_STRING_LEN(9),
     .bDescriptorType = USB_DESCRIPTOR_TYPE_STRING,
-    .bString = {'L', 0, 'e', 0, 'a', 0, 'f', 0,
-                'L', 0, 'a', 0, 'b', 0, 's', 0},
+    .bString = {'R', 0, 'o', 0, 'n', 0, 'n', 0,
+                'a', 0, 'T', 0, 'e', 0, 'c', 0, 'h', 0},
 };
 
 /* FIXME move to Wirish */
 static const usb_descriptor_string usbVcomDescriptor_iProduct = {
     .bLength = USB_DESCRIPTOR_STRING_LEN(5),
     .bDescriptorType = USB_DESCRIPTOR_TYPE_STRING,
-    .bString = {'M', 0, 'a', 0, 'p', 0, 'l', 0, 'e', 0},
+    .bString = {'R', 0, 'o', 0, 'n', 0, 'n', 0, 'a', 0},
 };
 
 static ONE_DESCRIPTOR Device_Descriptor = {
