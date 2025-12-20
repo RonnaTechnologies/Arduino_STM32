@@ -15,7 +15,7 @@ compiler.warning_flags.all=-Wall -Wextra -DDEBUG_LEVEL=DEBUG_NONE
 
 # compiler variables
 # ----------------------
-compiler.path={runtime.tools.arm-none-eabi-gcc.path}/bin/
+compiler.path={runtime.tools.arm-none-eabi-gcc.path}
 compiler.c.cmd=arm-none-eabi-gcc
 compiler.c.flags=-c -g {build.flags.optimize} {compiler.warning_flags} -std=c11 -MMD -ffunction-sections -fdata-sections -nostdlib --param max-inline-insns-single=500 -DBOARD_{build.variant} -D{build.vect} -DERROR_LED_PORT={build.error_led_port} -DERROR_LED_PIN={build.error_led_pin} 
 compiler.c.elf.cmd=arm-none-eabi-g++
@@ -146,7 +146,7 @@ tools.stlink_upload.upload.pattern="{path}/{cmd}"  "{build.path}/{build.project_
  
 # blackmagic probe upload
 tools.bmp_upload.cmd=arm-none-eabi-gdb
-tools.bmp_upload.path={runtime.tools.arm-none-eabi-gcc.path}/bin/
+tools.bmp_upload.path={runtime.tools.arm-none-eabi-gcc.path}
 tools.bmp_upload.upload.speed=230400
 tools.bmp_upload.upload.params.verbose=
 tools.bmp_upload.upload.params.quiet=-q --batch-silent
