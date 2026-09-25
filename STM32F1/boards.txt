@@ -334,6 +334,9 @@ genericSTM32F103C.vid.0=0x1EAF
 genericSTM32F103C.pid.0=0x0004
 genericSTM32F103C.build.variant=generic_stm32f103c
 genericSTM32F103C.build.vect=VECT_TAB_ADDR=0x8000000
+# Default linker script comes from device_variant; bootloader upload methods override build.ldscript.
+# (Both menus used to set build.ldscript, and arduino-cli applies menus in random order.)
+genericSTM32F103C.build.ldscript={build.variant_ldscript}
 genericSTM32F103C.build.core=maple
 genericSTM32F103C.build.board=GENERIC_STM32F103C
 genericSTM32F103C.build.error_led_port=GPIOC
@@ -347,14 +350,14 @@ genericSTM32F103C.upload.protocol=maple_dfu
 ## STM32F103C8 -------------------------
 genericSTM32F103C.menu.device_variant.STM32F103C8=STM32F103C8 (20k RAM. 64k Flash)
 genericSTM32F103C.menu.device_variant.STM32F103C8.build.cpu_flags=-DMCU_STM32F103C8
-genericSTM32F103C.menu.device_variant.STM32F103C8.build.ldscript=ld/jtag_c8.ld
+genericSTM32F103C.menu.device_variant.STM32F103C8.build.variant_ldscript=ld/jtag_c8.ld
 genericSTM32F103C.menu.device_variant.STM32F103C8.upload.maximum_size=65536
 genericSTM32F103C.menu.device_variant.STM32F103C8.upload.maximum_data_size=20480
 
 ## STM32F103CB -------------------------
 genericSTM32F103C.menu.device_variant.STM32F103CB=STM32F103CB (20k RAM. 128k Flash)
 genericSTM32F103C.menu.device_variant.STM32F103CB.build.cpu_flags=-DMCU_STM32F103CB
-genericSTM32F103C.menu.device_variant.STM32F103CB.build.ldscript=ld/jtag.ld
+genericSTM32F103C.menu.device_variant.STM32F103CB.build.variant_ldscript=ld/jtag.ld
 genericSTM32F103C.menu.device_variant.STM32F103CB.upload.maximum_size=131072
 genericSTM32F103C.menu.device_variant.STM32F103CB.upload.maximum_data_size=20480
 
